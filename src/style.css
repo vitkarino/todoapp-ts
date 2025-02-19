@@ -1,0 +1,47 @@
+:root {
+  --task-completed-color: #ffffff30;
+  --app-background-color: #262626;
+  --button-bg-color: #e060552a;
+  --button-hover-bg-color: #e060553f;
+  --button-active-bg-color: #e0605577;
+  --button-color: #e06155;
+  --button-hover-color: #ffffff;
+  --input-bg-color: #2e2e2e;
+  --input-active-bg-color: #ffffff1e;
+  --input-color: #ffffff;
+  --checkbox-bg-color: #ffffff18;
+  --checkbox-hover-bg-color: #ffffff34;
+  --checkbox-active-bg-color: #ffffff38;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--app-background-color);
+}
+
+.todo-app {
+  font-family: Verdana, sans-serif;
+  color: #ffffff;
+  height: 100vh;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.todo-app__button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
