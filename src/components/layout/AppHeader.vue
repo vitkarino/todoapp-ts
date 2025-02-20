@@ -19,7 +19,7 @@ const handleSubmit = () => {
     <h1 class="header__title">To-Do App</h1>
     <form class="header__form" @submit.prevent="handleSubmit">
       <input type="text" class="form__input" placeholder="Add a task" v-model="taskText" />
-      <button type="submit" class="form__button--submit">
+      <button type="submit" class="button button--submit">
         <img src="/src/assets/icon--plus.svg" class="button__icon" alt="Add a task" />
       </button>
     </form>
@@ -59,18 +59,18 @@ const handleSubmit = () => {
   background-color: var(--input-active-bg-color);
 }
 
-.form__button--submit {
+.button--submit {
   background-color: var(--button-bg-color);
   color: var(--button-color);
 }
 
-.form__button--submit:hover,
-.form__button--submit:focus {
+.button--submit:hover,
+.button--submit:focus {
   color: var(--input-color);
   background-color: var(--button-active-bg-color);
 }
 
-.form__button--submit:active {
+.button--submit:active {
   color: var(--button-hover-color);
   background-color: var(--button-hover-bg-color);
 }

@@ -8,7 +8,7 @@ const deleteTask = () => emit("delete", props.task.id);
 
 <template>
   <div class="task" :data-id="task.id" :data-completed="task.completed">
-    <button class="task__button--checkbox" @click="toggleTask">
+    <button class="button button--checkbox" @click="toggleTask">
       <img
         class="button__icon"
         src="/src/assets/icon--checkmark.svg"
@@ -16,7 +16,7 @@ const deleteTask = () => emit("delete", props.task.id);
       />
     </button>
     <span class="task__text">{{ task.text }}</span>
-    <button class="task__button--delete" @click="deleteTask">
+    <button class="button button--delete" @click="deleteTask">
       <img
         src="/src/assets/icon--bin.svg"
         class="button__icon"
@@ -37,15 +37,15 @@ const deleteTask = () => emit("delete", props.task.id);
   border-bottom: 1px solid #3d3d3d;
 }
 
-.task__button--checkbox {
+.button--checkbox {
   background-color: var(--checkbox-bg-color);
 }
 
-.task__button--checkbox .button__icon {
+.button--checkbox .button__icon {
   display: none;
 }
 
-.task[data-completed="true"] .task__button--checkbox .button__icon {
+.task[data-completed="true"] .button--checkbox .button__icon {
   display: block;
 }
 
@@ -58,28 +58,28 @@ const deleteTask = () => emit("delete", props.task.id);
   width: 28px;
 }
 
-.task__button--checkbox:hover,
-.task__button--checkbox:focus {
+.button--checkbox:hover,
+.button--checkbox:focus {
   background-color: var(--checkbox-hover-bg-color);
 }
 
-.task__button--checkbox:active {
+.button--checkbox:active {
   background-color: var(--checkbox-active-bg-color);
 }
 
-.task__button--delete {
+.button--delete {
   margin-left: auto;
   background: none;
   width: 40px;
   height: 40px;
 }
 
-.task__button--delete:hover,
-.task__button--delete:focus {
+.button--delete:hover,
+.button--delete:focus {
   background-color: var(--button-hover-bg-color);
 }
 
-.task__button--delete:active {
+.button--delete:active {
   background-color: var(--button-active-bg-color);
 }
 </style>
