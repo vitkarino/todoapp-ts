@@ -1,4 +1,4 @@
-class Task {
+export default class Task {
     id: string;
     taskText: string;
     completed: boolean;
@@ -8,4 +8,4 @@ class Task {
       this.taskText = taskText;
       this.completed = false;
     }
-  }
+}

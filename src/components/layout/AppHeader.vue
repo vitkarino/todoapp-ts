@@ -1,10 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useTasks } from '../../composables/useTasks';
+
+const { addTask } = useTasks(); 
+const taskText = ref("");
+
+const handleSubmit = () => {
+  if (taskText.value.trim()) {
+    addTask(taskText.value);
+    taskText.value = "";
+  }
+}
+
+</script>
 
 <template>
   <header class="todo-app__header">
     <h1 class="todo-app__title">To-Do App</h1>
-    <form class="todo-app__form">
-      <input type="text" class="todo-app__input" placeholder="Add task" />
+    <form class="todo-app__form" @submit.prevent="handleSubmit">
+      <input type="text" class="todo-app__input" placeholder="Add task" v-model="taskText" />
       <button type="submit" class="todo-app__button todo-app__add-task-button">
         +
       </button>

@@ -1,7 +1,8 @@
-class LocalStorage 
+export default class LocalStorage 
 {
     static set<T>(key: string, value: T): void 
     {
+        // alert("Data saved successfully");
         localStorage.setItem(key, JSON.stringify(value));
     }
 
@@ -11,6 +12,7 @@ class LocalStorage
         {
             const item = localStorage.getItem(key);
             return item ? JSON.parse(item) : null;
+           
         } catch (error) 
         {
             return null;
