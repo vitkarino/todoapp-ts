@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useTasks } from '../../composables/useTasks';
-import AppTask from "./AppTask.vue";
+import TaskItem from "./TaskItem.vue";
 
 const { tasks, removeTask, toggleTaskCompletion } = useTasks();
 </script>
 
 <template>
-  <div class="todo-app__task-list">
-    <AppTask
+  <div class="task-list">
+    <TaskItem
       v-for="task in tasks"
       :key="task.id"
       :task="task"
@@ -18,7 +18,7 @@ const { tasks, removeTask, toggleTaskCompletion } = useTasks();
 </template>
 
 <style scoped>
-.todo-app__task-list {
+.task-list {
   list-style: none;
 }
 </style>

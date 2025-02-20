@@ -32,11 +32,11 @@ body {
   width: fit-content;
 }
 
-.todo-app__button {
+button {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   border-radius: 50px;
   width: 40px;
   height: 40px;

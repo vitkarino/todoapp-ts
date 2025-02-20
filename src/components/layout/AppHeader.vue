@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useTasks } from '../../composables/useTasks';
 
-const { addTask } = useTasks(); 
+const { addTask } = useTasks();
 const taskText = ref("");
 
 const handleSubmit = () => {
@@ -15,35 +15,35 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <header class="todo-app__header">
-    <h1 class="todo-app__title">To-Do App</h1>
-    <form class="todo-app__form" @submit.prevent="handleSubmit">
-      <input type="text" class="todo-app__input" placeholder="Add task" v-model="taskText" />
-      <button type="submit" class="todo-app__button todo-app__add-task-button">
-        +
+  <header class="header">
+    <h1 class="header__title">To-Do App</h1>
+    <form class="header__form" @submit.prevent="handleSubmit">
+      <input type="text" class="form__input" placeholder="Add a task" v-model="taskText" />
+      <button type="submit" class="form__button--submit">
+        <img src="/src/assets/icon--plus.svg" class="button__icon" alt="Add a task" />
       </button>
     </form>
   </header>
 </template>
 
 <style scoped>
-.todo-app__header {
+.header {
   padding: 30px 0;
 }
 
-.todo-app__title {
+.header__title {
   margin: 0 0 10px 0;
   text-align: center;
 }
 
-.todo-app__form {
+.header__form {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
 
-.todo-app__input {
+.form__input {
   height: 40px;
   font-size: 18px;
   background: var(--input-bg-color);
@@ -55,22 +55,22 @@ const handleSubmit = () => {
   position: relative;
 }
 
-.todo-app__input:focus {
+.form__input:focus {
   background-color: var(--input-active-bg-color);
 }
 
-.todo-app__add-task-button {
+.form__button--submit {
   background-color: var(--button-bg-color);
   color: var(--button-color);
 }
 
-.todo-app__add-task-button:hover,
-.todo-app__add-task-button:focus {
+.form__button--submit:hover,
+.form__button--submit:focus {
   color: var(--input-color);
   background-color: var(--button-active-bg-color);
 }
 
-.todo-app__add-task-button:active {
+.form__button--submit:active {
   color: var(--button-hover-color);
   background-color: var(--button-hover-bg-color);
 }

@@ -1,11 +1,11 @@
 export default class Task {
-    id: string;
-    taskText: string;
-    completed: boolean;
+    id;
+    text;
+    completed;
 
-    constructor(taskText: string) {
-      this.id = crypto.randomUUID();
-      this.taskText = taskText;
-      this.completed = false;
-    }
+  constructor(text: string) {
+    this.id = Date.now();
+    this.text = text;
+    this.completed = false;
+  }
 }
