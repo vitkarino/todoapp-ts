@@ -1,16 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useTasks } from '../../composables/useTasks';
-
-const { addTask } = useTasks();
-const taskText = ref("");
-
-const handleSubmit = () => {
-  if (taskText.value.trim()) {
-    addTask(taskText.value);
-    taskText.value = "";
-  }
-}
+import { ref } from "vue";
+import TodoApp from '@/controllers/TodoApp';
 
 </script>
 

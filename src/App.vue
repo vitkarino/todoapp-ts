@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import AppHeader from "./components/layout/AppHeader.vue";
-import TaskList from "./components/ui/TaskList.vue";
-import { useTasks } from "./composables/useTasks";
+import TodoApp from './controllers/TodoApp';
+import AppHeader from './components/layout/AppHeader.vue';
+import TaskList from './components/ui/TaskList.vue';
 
-const { tasks, addTask, removeTask, toggleTaskCompletion } = useTasks();
+const todoApp = new TodoApp()
 </script>
 
 <template>
-  <div class="todo-app">
-    <AppHeader :addTask="addTask" />
-    <TaskList
-      :tasks="tasks"
-      :removeTask="removeTask"
-      :toggleTaskCompletion="toggleTaskCompletion"
-    />
+    <AppHeader />
+    <TaskList :todo="todoApp.tasks" />
   </div>
 </template>
 
