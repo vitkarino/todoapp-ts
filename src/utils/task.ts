@@ -1,12 +1,12 @@
 export default class Task {
-    id;
-    text;
-    completed;
-    static idCounter = 0;
+	id;
+	taskText;
+	completed;
+	static idCounter = 0;
 
-  constructor(text: string) {
-    this.id = ++Task.idCounter;
-    this.text = text;
-    this.completed = false;
-  }
+	constructor(text: string) {
+		this.id = ++Task.idCounter;
+		this.taskText = text;
+		this.completed = false;
+	}
 }

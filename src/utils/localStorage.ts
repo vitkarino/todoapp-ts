@@ -9,6 +9,6 @@ export default class LocalStorage {
       return item ? JSON.parse(item) : null;
     } catch (error) {
       throw new Error(`Error getting item from localStorage: ${error}`);
-      }
+    }
   }
 }
